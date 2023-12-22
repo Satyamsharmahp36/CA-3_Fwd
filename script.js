@@ -266,7 +266,10 @@ function Circle(x,y,dx,dy,radius){
 var circleArray = [];
 
 // generating random values for are circle arguments
-for(var i=0;i<400;i++){
+// changing number of ball depending on our screen
+var numberOfCircles = (innerWidth < 600) ? 130 : 450;
+
+for(var i=0;i<numberOfCircles;i++){
     var radius= Math.random()*1.5+1;
     var x = Math.random()*(innerWidth-radius*2)+radius;
     var y = Math.random()*(innerWidth-radius*2)+radius;
